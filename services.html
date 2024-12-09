@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiPulse</title>
+    <link rel="icon" href="pics/favicon.jpg" type="image/jpeg"> 
+</head>
+<body>
+<style>
+    *{
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  background: linear-gradient(135deg,
+      rgba(201, 194, 194, 0.7),
+      rgba(0, 0, 0, 0.7)
+  ),
+  url('pics/Orange\ and\ yellow\ digital\ data\ and\ n.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+
+.navbar{
+  width: 1200px;
+  height: 75px;
+  margin: auto;
+}
+
+.icon{
+  width: 200px;
+  float: left;
+  height: 70px;
+}
+
+.logo{
+  color: #ff7200;
+  font-size: 35px;
+  font-family: Arial;
+  padding-left: 20px;
+  float: left;
+  padding-top: 10px;
+  margin-top: 5px
+}
+
+.menu{
+  width: 400px;
+  float: left;
+  height: 70px;
+}
+
+ul{
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li{
+  list-style: none;
+  margin-left: 62px;
+  margin-top: 27px;
+  font-size: 14px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+  color: #ff7200;
+}
+
+.search{
+  width: 330px;
+  float: left;
+  margin-left: 270px;
+}
+
+.srch {
+  font-family: 'Arial'; /* Changed to Arial */
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid #ff7200;
+  margin-top: 13px;
+  color: #fff; /* Text color remains white */
+  border-right: none;
+  font-size: 16px;
+  float: left;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.btn{
+  width: 100px;
+  height: 40px;
+  background: #ff7200;
+  border: 2px solid #ff7200;
+  margin-top: 13px;
+  color: #fff;
+  font-size: 15px;
+  border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:hover{
+  color: #000;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.srch:focus {
+    outline: none;
+}
+
+
+
+/* Section Styling */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 150px);
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.features {
+  .about {
+    padding: 40px 50px;
+    text-align: center;
+  }
+  
+}
+
+.features h2 {
+  color: #ff7200;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.features-container {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
+    gap: 20px; /* Space between the items */
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Set a max width to align with navbar */
+    padding: 0 20px; /* Add padding to the sides */
+    justify-items: center; /* Center items horizontally */
+}
+
+/* Feature Card Styling */
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0. 3);
+    text-align: center; /* Center text within the card */
+    width: 100%; /* Ensure cards take full width of grid cell */
+    max-width: 300px; /* Set a max width for the cards */
+}
+
+.feature-card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #f0f0f0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.feature-card p {
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* For smaller screens, adjust layout to stack the cards */
+@media screen and (max-width: 768px) {
+    .features-container {
+        grid-template-columns: 1fr; /* Stack cards in a single column */
+    }
+}
+
+/* Footer Styling */
+.footer {
+  background:  #333;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .features {
+        padding: 20px;
+        height: auto;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .feature-card {
+        max-width: 100%;
+    }
+
+    .features h2 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .feature-card {
+        padding: 15px;
+    }
+
+    .feature-card h3 {
+        font-size: 16px;
+    }
+
+    .feature-card p {
+        font-size: 12px;
+    }
+}
+
+/* Service Cards Styling */
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Emoji Styling */
+.feature-card .emoji {
+    font-size: 48px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Card Hover Effects */
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ff7200;
+    box-shadow: 0 15px 30px rgba(255, 114, 0, 0.2),
+                0 0 20px rgba(255, 114, 0, 0.3),
+                0 0 40px rgba(255, 114, 0, 0.1);
+}
+
+.feature-card:hover .emoji {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.feature-card:hover h3 {
+    color: #ff7200;
+    text-shadow: 0 0 10px rgba(255, 114, 0, 0.5);
+}
+
+.feature-card:hover p {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Navbar Animations */
+.navbar {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff7200, transparent);
+    animation: navGlow 3s linear infinite;
+}
+
+@keyframes navGlow {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Menu Item Hover Effects */
+.menu ul li a {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff7200;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.menu ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Glow Animation */
+@keyframes cardGlow {
+    0%, 100% {
+        box-shadow: 0 15px 30px rgba(255, 114, 0, 0.2),
+                    0 0 20px rgba(255, 114, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 15px 30px rgba(255, 114, 0, 0.4),
+                    0 0 40px rgba(255, 114, 0, 0.5);
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .feature-card .emoji {
+        font-size: 36px;
+    }
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 100;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 0 10px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .menu {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px 0;
+        transition: 0.3s ease;
+        z-index: 99;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 15px 0;
+    }
+
+    .search {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+
+    .search.active {
+        display: flex;
+    }
+}
+
+/* Centering the Navbar */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    align-items: center; /* Align items vertically */
+    width: 100%;
+}
+
+.menu {
+    display: flex; /* Ensure the menu items are in a row */
+    justify-content: center; /* Center the menu items */
+}
+
+/* Centering the About Section */
+.about {
+    text-align: center; /* Center the text in the about section */
+}
+
+.try-out {
+    text-align: center;
+    margin: 20px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.try-out h2 {
+    color: #ff7200;
+    text-shadow: 0 0 10px rgba(255, 114, 0, 0.7), 0 0 20px rgba(255, 114, 0, 0.5);
+    text-align: center;
+    justify-content: center;
+   
+}
+
+.scroll-to-glass {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff7200;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-to-glass:hover {
+    background-color: #e06e00;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.glass-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.glass-container {
+    display: flex; /* Use flexbox for two columns */
+    justify-content: space-between; /* Space between columns */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.column {
+    flex: 1; /* Each column takes equal space */
+    margin: 0 10px; /* Add some margin between columns */
+}
+
+/* Adjust for smaller screens */
+@media screen and (max-width: 768px) {
+    .glass-container {
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 30px rgba(255, 114, 0, 0.2),
+                0 0 20px rgba(255, 114, 0, 0.3);
+}
+
+.emoji {
+    font-size: 48px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+p {
+    color: #f0f0f0;
+}
+
+.glass-card:hover .emoji {
+    transform: scale(1.2);
+}
+
+</style>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">OptiPulse</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICE</a></li>
+                    <li><a href="contacts.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" placeholder="Type To text">
+                <button class="btn">Search</button> <!-- Removed the unnecessary <a> tag -->
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div> 
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2>Features</h2>
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="emoji">🔗</div>
+                    <h3>Integrated App Hub</h3>
+                    <p>Access all your academic platforms from one centralized location.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">🔔</div>
+                    <h3>Notifications</h3>
+                    <p>Stay updated with deadlines, events, and academic news.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">👤</div>
+                    <h3>Account Management</h3>
+                    <p>Save credentials securely for seamless login experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">📝</div>
+                    <h3>Personal Notes</h3>
+                    <p>Organize tasks, reminders, and academic goals in one place.</p>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <!-- Add this section for the "Try out our program!" -->
+        <section class="try-out">
+            <h2>Try out our program!</h2>
+            <button class="scroll-to-glass">TRY IT OUT!</button>
+        </section>
+
+        <section id="glass-section" class="glass-section">
+            <h2>Glass Morphism Showcase</h2>
+            <div class="glass-container">
+                <div class="column">
+                    <div class="glass-card">
+                        <h3 style="color: #e06e00;">VISION</h3>
+                        <p style="font-size: large;">
+                            To establish OptiPulse as a trusted academic platform that simplifies and enhances students' online learning experiences, promoting better productivity and organization..
+                        </p>
+                    </div>
+                    <div class="glass-card">
+                        <h3 style="color: #e06e00;">MISSION</h3>
+                        <p style="font-size: large;">
+                            To provide students with a reliable and accessible tool that integrates academic resources, helping them stay focused, organized, and efficient in managing their academic responsibilities.
+                        </p>
+                    </div>
+                    <div class="glass-card">
+                        <h3 style="color: #e06e00;">GOALS</h3>
+                        <p style="font-size: large;">
+                            1. Launch OptiPulse within the set timeline and onboard at least 40-50 users within the first 19 days.
+                            <br>2. Collect user feedback to identify areas for improvement and refine the platform accordingly.
+                            <br>3. Demonstrate the platform's effectiveness during live presentations or through faculty and peer endorsements.
+                            <br>4. Develop basic but functional features like the integrated app hub, notifications, and personal notes for immediate usability.
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="glass-card">
+                        <div class="emoji">🔗</div>
+                        <h3 style="color: #e06e00;">Integrated App Hub</h3>
+                        <p>Access all your academic platforms from one centralized location.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="emoji">🔔</div>
+                        <h3 style="color: #e06e00;">Notifications</h3>
+                        <p>Stay updated with deadlines, events, and academic news.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="emoji">👤</div>
+                        <h3 style="color: #e06e00;">Account Management</h3>
+                        <p>Save credentials securely for seamless login experiences.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="emoji">📝</div>
+                        <h3 style="color: #e06e00;">Personal Notes</h3>
+                        <p>Organize tasks, reminders, and academic goals in one place.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> 
+
+    <footer class="footer">
+        <p>© 2024 OptiPulse. Empowering Students Everywhere.</p>
+    </footer>
+
+    <script>
+        // Hamburger Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
+        const search = document.querySelector('.search');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+            search.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+                search.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+                search.classList.remove('active');
+            }
+        });
+
+        // Add this JavaScript to handle the button click for glass morphism
+        document.querySelector('.scroll-to-glass').addEventListener('click', function() {
+            document.getElementById('glass-section').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

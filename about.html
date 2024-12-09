@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OptiPulse</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="pics/favicon.jpg" type="image/jpeg"> 
+</head>
+<body>
+    <style>
+        *{
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 0 10px; /* Adds margin/padding for the content area */
+}
+
+.main {
+  width: 100%;
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.7),
+      rgba(218, 213, 213, 0.7)
+  ),
+  url('pics/Orange\ and\ yellow\ digital\ data\ and\ n.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+.navbar{
+  width: 1200px;
+  height: 75px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon{
+  width: 200px;
+  float: left;
+  height: 70px;
+}
+
+.logo{
+  color: #ff7200;
+  font-size: 35px;
+  font-family: Arial;
+  padding-left: 20px;
+  float: left;
+  padding-top: 10px;
+  margin-top: 5px
+}
+
+.menu{
+  width: 400px;
+  float: left;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+ul{
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ul li{
+  list-style: none;
+  margin-left: 62px;
+  margin-top: 27px;
+  font-size: 14px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+  color: #ff7200;
+}
+
+
+.search{
+  width: 330px;
+  float: left;
+  margin-left: 270px;
+}
+
+.srch{
+  font-family: 'Arial';
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid #ff7200;
+  margin-top: 13px;
+  border-right: none;
+  font-size: 16px;
+  float: left;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+
+.btn{
+  width: 100px;
+  height: 40px;
+  background: #ff7200;
+  border: 2px solid #ff7200;
+  margin-top: 13px;
+  color: #fff;
+  font-size: 15px;
+  border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.btn:hover{
+  color: #fff;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.srch:focus{
+  outline: none;
+}
+
+
+
+/* Section Styling */
+.about, .benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.about h2, .benefits h2 {
+  color: #ff7200;
+  margin-bottom: 20px;
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+.about p, .benefits p {
+  
+  color: white;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: Arial;
+  margin: auto;
+}
+
+.benefits ul {
+  padding: 0;
+  text-align: left;
+  margin: auto;
+}
+
+.benefits ul li {
+  color: #ddd;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+  font-family: Arial;
+  padding: 50 10px;
+}
+
+.benefits ul li strong {
+  color: #ff7200;
+}
+
+
+
+/* Footer Styling */
+.footer-content p {
+  margin: 5px 0;
+}
+
+.footer-content a {
+  color: #ff7200;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-content a:hover {
+  color: #fff;
+}
+
+.footer {
+  background: #333;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 10px;
+  width: 98.7%; /* Ensures the footer spans the entire width */
+}
+
+@media screen and (max-width: 768px) {
+    .about, .benefits {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .about h2, .benefits h2 {
+        font-size: 28px;
+    }
+
+    .about p, .benefits p {
+        font-size: 16px;
+    }
+
+    .benefits ul li {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about h2, .benefits h2 {
+        font-size: 24px;
+    }
+
+    .about p, .benefits p, .benefits ul li {
+        font-size: 14px;
+    }
+}
+
+/* Glassmorphism Containers */
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.glass-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(255, 114, 0, 0.2);
+    border-color: rgba(255, 114, 0, 0.3);
+}
+
+/* Navbar Animations */
+.navbar {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff7200, transparent);
+    animation: navGlow 3s linear infinite;
+}
+
+@keyframes navGlow {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Menu Item Animations */
+.menu ul li a {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff7200;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.menu ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 100;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 0 10px;
+        position: relative;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .menu {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px 0;
+        transition: 0.3s ease;
+        z-index: 99;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 15px 0;
+    }
+
+    .search {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+
+    .search.active {
+        display: flex;
+    }
+}
+/* Content Animations */
+.about h2, .benefits h2 {
+    transition: all 0.3s ease;
+}
+
+.glass-container:hover h2 {
+    transform: scale(1.05);
+    color: #ff7200;
+    text-shadow: 0 0 15px rgba(255, 114, 0, 0.3);
+}
+
+.glass-container:hover p {
+    animation: textFloat 0.5s ease forwards;
+}
+
+.glass-container:hover ul li {
+    animation: listItemSlide 0.5s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+/* Animation Keyframes */
+@keyframes textFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes listItemSlide {
+    0% { transform: translateX(-10px); opacity: 0.5; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .glass-container {
+        padding: 30px;
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .glass-container {
+        padding: 20px;
+        margin: 10px;
+    }
+}
+    </style>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">OptiPulse</h2>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICE</a></li>
+                    <li><a href="contacts.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div> 
+        
+        <!-- About Section -->
+        <div class="content">
+            <section id="about" class="about glass-container">
+                <h2>About OptiPulse</h2>
+                <p>OptiPulse is the ultimate student productivity platform, crafted to streamline academic management. We aim to simplify your educational journey by providing an all-in-one hub for organizing schedules, managing tasks, saving notes, and securely storing credentials. Our goal is to empower students to take control of their academic responsibilities with ease and efficiency, helping them achieve more without the chaos of juggling multiple tools.</p>
+            </section>
+
+            <!-- Benefits Section -->
+            <section id="benefits" class="benefits glass-container">
+                <h2>Why Choose OptiPulse?</h2>
+                <p>Revolutionize how you approach your studies with these key features:</p>
+                <ul>
+                    <li style="--i:1"><strong>Integrated Dashboard:</strong> The centralized dashboard provides quick access to various academic platforms, such as course materials, schedules, grades, and important student resources, all on one page. This integration saves time and effort by allowing students to manage everything in a single space.</li>
+                    <li style="--i:2"><strong>Real-Time Notifications:</strong> OptiPulse ensures that students never miss an important deadline, event, or exam by delivering real-time notifications and alerts. Whether it's a class announcement or a due date, students stay informed and organized without having to check multiple platforms.</li>
+                    <li style="--i:3"><strong>Personalized Notes Section:</strong> A dedicated area for students to keep track of their tasks, assignments, and personal notes. The customizable workspace includes features such as to-do lists, reminders, and digital sticky notes to help students stay organized and on top of their academic responsibilities.</li>
+                </ul>
+            </section>
+        </div>
+    </div> <!-- Close the main div -->
+      
+    <footer class="footer">
+        <p>© 2024 OptiPulse. Empowering Students Everywhere.</p>
+    </footer>
+</body>
+<script>
+    // Hamburger Menu Functionality
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+    const search = document.querySelector('.search');
+
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        menu.classList.toggle('active');
+        search.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            menu.classList.remove('active');
+            search.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+            hamburger.classList.remove('active');
+            menu.classList.remove('active');
+            search.classList.remove('active');
+        }
+    });
+</script>
+</html>

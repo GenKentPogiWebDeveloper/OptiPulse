@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiPulse</title>
+    <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="pics/favicon.jpg" type="image/jpeg"> 
+</head>
+<body>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(167, 164, 164, 0.7)
+    ),
+    url('pics/Orange\ and\ yellow\ digital\ data\ and\ n.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+
+.cn:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: #ff7200;
+    font-size: 65px
+}
+
+.form{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -20px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: #ff7200;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 150px);
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact h2 {
+    font-size: 36px; 
+    margin-bottom: 20px; /* Space below the heading */
+    color: #ff7200; 
+}
+
+/* Image Section */
+.image-section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center images */
+    margin-bottom: 30px; /* Space below the image section */
+}
+
+.image-section img {
+    width: 200px; 
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    margin: 0 10px; /* Space between images */
+}
+
+/* Team Container */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Profile Card Styling */
+.team-member {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ff7200;
+    box-shadow: 0 15px 30px rgba(255, 114, 0, 0.2),
+                0 0 20px rgba(255, 114, 0, 0.3);
+}
+
+/* Profile Image */
+.member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 3px solid #ff7200;
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.team-member:hover .member-image {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 114, 0, 0.5);
+}
+
+/* Member Info */
+.member-info {
+    color: #fff;
+}
+
+.member-info h3 {
+    color: #ff7200;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover h3 {
+    transform: translateY(-5px);
+    text-shadow: 0 0 10px rgba(255, 114, 0, 0.5);
+    animation: nameJump 0.5s ease;
+}
+
+.member-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff7200;
+    transform: translateY(-3px);
+}
+
+/* Contact Button */
+.contact-btn {
+    display: block;
+    width: 200px;
+    margin: 40px auto;
+    padding: 15px 30px;
+    background: rgba(255, 114, 0, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.contact-btn:hover {
+    background: #ff7200;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 114, 0, 0.4);
+}
+
+/* Navbar Animations */
+.navbar {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff7200, transparent);
+    animation: navGlow 3s linear infinite;
+}
+
+/* Animations */
+@keyframes nameJump {
+    0%, 100% { transform: translateY(-5px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes navGlow {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .member-info h3 {
+        font-size: 20px;
+    }
+}
+
+/* Footer Styling */
+.footer {
+  background:  #333;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 20px 10px;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .member-info {
+        text-align: center;
+    }
+
+    .member-image {
+        margin: 15px 0 0 0;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .team-member {
+        padding: 10px;
+    }
+
+    .member-info h3 {
+        font-size: 16px;
+    }
+
+    .member-info p {
+        font-size: 14px;
+    }
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    margin-right: 20px;
+    z-index: 1000;
+}
+
+.hamburger-lines {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 10px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 75px;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: calc(100vh - 75px);
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu ul li {
+        margin: 25px 0;
+    }
+
+    .search {
+        display: none;
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+    }
+
+    .search.active {
+        display: flex;
+        justify-content: center;
+    }
+
+    .srch {
+        width: 70%;
+    }
+
+    /* Centering the Navbar */
+    .navbar {
+        display: flex;
+        justify-content: center; /* Center the navbar items */
+        align-items: center; /* Align items vertically */
+        width: 100%;
+    }
+
+    .menu {
+        display: flex; /* Ensure the menu items are in a row */
+        justify-content: center; /* Center the menu items */
+    }
+
+    /* Centering the About Section */
+    .about {
+        text-align: center; /* Center the text in the about section */
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .hamburger-lines:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .hamburger-lines:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .hamburger-lines:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+</style>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">OptiPulse</h2>
+            </div>
+
+            <button class="hamburger">
+                <span class="hamburger-lines"></span>
+                <span class="hamburger-lines"></span>
+                <span class="hamburger-lines"></span>
+            </button>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICE</a></li>
+                    <li><a href="contacts.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div> 
+
+    <!-- Contact Section -->
+    <div class="contact">
+        <h2>Meet Our Team</h2>
+        
+        <div class="team-container">
+            <div class="team-member">
+                <img src="pics/bon.jpg" alt="Migrich Bon N. Nellas" class="member-image">
+                <div class="member-info">
+                    <h3>Migrich Bon N. Nellas</h3>
+                    <p style="color:aquamarine; font-size: 25px;">Project Lead</p>
+                    <p>migrichbon@gmail.com</p>
+                    <p>0969 110 5489</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/migrichbon.nellas" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-google"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="pics/tambor.jpg" alt="Gerald Nathaniel N. Tambor" class="member-image">
+                <div class="member-info">
+                    <h3>Gerald Nathaniel N. Tambor</h3>
+                    <p style="color: aquamarine; font-size: 25px;">Developer</p>
+                    <p>geraldntambor@gmail.com</p>
+                    <p>09388091338</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/geraldtambor.tambor" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-google"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="pics/chy.jpg" alt="Chynna A. Mantalaba" class="member-image">
+                <div class="member-info">
+                    <h3>Chynna A. Mantalaba</h3>
+                    <p style="color: aquamarine; font-size: 25px;">Business Strategist</p>
+                    <p>chynnamantalaba14@gmail.com</p>
+                    <p>09289447985</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/chynna.mantalaba.73" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-google"></i></a>
+                      
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="pics/kj.jpg" alt="Michael Brown" class="member-image">
+                <div class="member-info">
+                    <h3>Kj Dacuyan</h3>
+                    <p style="color: aquamarine; font-size: 25px;">Technical Support</p>
+                    <p>kjdacuyan22@gmail.com</p>
+                    <p>09621919120</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/soloqyu" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-google"></i></a>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://www.facebook.com/profile?id=61569879900791" class="contact-btn" target="_blank">
+            Contact Us
+        </a>
+    </div>
+    
+</div> <!-- Close the main div -->
+      
+<footer class="footer">
+    <p>© 2024 OptiPulse. Empowering Students Everywhere.</p>
+  </footer>
+
+<script>
+    // Hamburger Menu Functionality
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+    const search = document.querySelector('.search');
+    const body = document.querySelector('body');
+
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        menu.classList.toggle('active');
+        search.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            menu.classList.remove('active');
+            search.classList.remove('active');
+            body.classList.remove('no-scroll');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+            hamburger.classList.remove('active');
+            menu.classList.remove('active');
+            search.classList.remove('active');
+            body.classList.remove('no-scroll');
+        }
+    });
+</script>
+</body>
+</html>
